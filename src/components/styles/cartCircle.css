@@ -1,0 +1,13 @@
+.circleShop {
+     height: 30px;
+    width: 30px;
+    font-size: 0.96rem;
+    
+}
+
+
+
+.bgCircleShop{
+    background-color: rgb(250, 55, 71);
+    border-radius: solid 5px;
+}

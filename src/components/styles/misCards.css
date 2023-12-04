@@ -1,0 +1,63 @@
+/* importamos la fuente para las cards */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/* Estilo personalizado para las tarjetas de Bootstrap */
+
+/* Cambio de tamaño de imágenes */
+.customImage {
+  height: 200px;
+  width: 250px;
+}
+
+/* Establecer altura y ancho fijos para las tarjetas */
+.card {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.50rem;
+  width: 291px;
+  height: 400px; /* Establece la altura fija que desees */
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
+  transition: transform 0.2s; /* Añade una transición suave al efecto de zoom */
+}
+
+/* Efecto de zoom al pasar el ratón sobre la card */
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  color: #141414; /* Cambia el color del título  */
+}
+
+.card-text {
+  color: #2b2929; /* Cambia el color del contenido  */
+}
+
+/* Cambiar el color del enlace dentro de la tarjeta */
+.card-link {
+  color: #007BFF; /* Cambia el color del enlace */
+}
+
+.card-btn:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor por encima */
+}
+
+.card-body {
+  border: none;
+}
+
+/* Alinea los iconos en la parte superior derecha */
+.card-icons {
+  margin-top: auto; /* Empuja los iconos hacia la parte superior */
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.card-icons .btn {
+  opacity: 0.9; /* Semi-transparentes */
+}
+
+.stock_true {
+  font-size: 1rem !important;
+}

@@ -1,0 +1,61 @@
+.custom-navbar {
+    background-color: rgb(235, 52, 52) !important;
+    border-radius: solid 0,0,5px
+  }
+  
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav-link {
+    color: white !important;
+  }
+  
+   
+  .custom-navbar .form-control {
+    color: black; /* Para mantener el texto del input de búsqueda visible */
+  }
+  
+  /* Para el botón de búsqueda, cambiar el color del borde si es necesario */
+  .custom-navbar .btn-outline-success {
+    border-color: rgb(20, 20, 20);
+    color: rgb(51, 46, 46);
+  }
+  
+  .custom-navbar .btn-outline-success:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .MiSearchCustom{
+    height: 100px;
+
+  }
+
+  .brand a{
+    text-decoration: none;
+    font: white;
+
+
+
+  }
+
+
+  /* Cambiar el color de fondo y texto para la clase .navbar-danger */
+.navbar-danger {
+  background-color: #0a0405; /* Cambia este color al que desees */
+  border-color: #0a0405; /* Puedes cambiar el color del borde si es necesario */
+  color: #fff; /* Cambia el color del texto al que desees */
+}
+
+/* Cambiar el color del enlace en el navbar cuando está en modo 'hover' o 'focus' */
+.navbar-danger .navbar-nav .nav-link:hover,
+.navbar-danger .navbar-nav .nav-link:focus {
+  color: #fff; /* Cambia el color del enlace en hover o focus */
+}
+
+/* Cambiar el color del enlace activo en el navbar */
+.navbar-danger .navbar-nav .nav-item.active .nav-link {
+  color: #fff; /* Cambia el color del enlace activo */
+}
+
+
+
+  
