@@ -13,7 +13,6 @@
 | - **🎫 Catálogo de Productos:** Explora una amplia gama de productos organizados de manera intuitiva. |
 | - **🛒 Carrito de Compras:** Agrega productos al carrito y gestiona las compras de manera sencilla. |
 | - **💼 Proceso de Pago Seguro:** Realiza transacciones de forma segura utilizando métodos de pago seguros integrados. |
-| - **🔗 Deploy del proyecto :** https://final-react-js-adrian-fernandez-r5rhpblfd.vercel.app/.|
 
 
 
