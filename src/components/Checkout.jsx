@@ -6,7 +6,7 @@ import { db } from './firebase';
 import Swal from 'sweetalert2';
 
 const Checkout = () => {
-  const { cart, removeProduct, PriceFinal} = useCartContext();
+  const { cart, removeProduct, PriceFinal } = useCartContext();
   const [user, setUser] = useState({
     name: '',
     phone: '',
@@ -37,7 +37,7 @@ const Checkout = () => {
       errors.repeatedEmail = 'Campo requerido';
     }
     setFormErrors(errors);
-    setEmailMatch(validateEmails());  // Actualizo el estado de emailMatch
+    setEmailMatch(validateEmails());
     return Object.keys(errors).length === 0 && emailMatch;
   };
 
@@ -46,6 +46,7 @@ const Checkout = () => {
 
     if (isFormValid) {
       const order = {
+        orderId: Date.now(),
         buyer: user,
         items: cart,
         total: PriceFinal(),
@@ -54,20 +55,19 @@ const Checkout = () => {
       const ordersCollection = collection(db, 'orders');
       addDoc(ordersCollection, order).then(({ id }) => {
         Swal.fire({
-          title: `Muchas gracias por tu compra ${user.name}`,
-          text: `Te hemos enviado un correo a ${user.email} con la orden de compra ${id}`,
+          title: `Muchas gracias por tu compra ${user.name}  su total es de ${order.total} `,
+          text: `Te hemos enviado un correo a ${user.email} con la orden de compra #${order.orderId}`,
           icon: 'success',
           showCancelButton: false,
           customClass: {
             confirmButton: 'alertButton',
           },
         }).then(function () {
-          removeProduct();  // Utilizo la función removeProduct del contexto
+          removeProduct();
           window.location = '/';
         });
       });
     } else {
-      // Muestra mensaje si hay un error
       Swal.fire({
         title: 'Error',
         text: 'Por favor, verifica tus datos',
@@ -90,7 +90,6 @@ const Checkout = () => {
                 className="text-black p-2"
               />
             </InputGroup>
-
 
             <InputGroup className="mb-1">
               <FormControl
